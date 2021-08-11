@@ -4,8 +4,10 @@ function App() {
 
   const [id, setId] = React.useState('');
 
+  const key: string = '3B379C7D4F5B3E019F6D2CE93C2F0DFD';
+
   function findUser(id: string):any {
-    return fetch('http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/&steamid=76561197960434622&format=json')
+    return fetch('http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=3B379C7D4F5B3E019F6D2CE93C2F0DFD&steamid=76561198300585294&format=json')
       .then((user) => {
         console.log(user);
         return user
